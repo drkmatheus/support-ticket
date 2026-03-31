@@ -11,7 +11,11 @@ export function routeHandler(req, res) {
 
   if (route) {
     const routeParams = req.url.match(route.path);
-    const { query } = routeParams.groups;
+
+    const { query, ...params } = routeParams.groups;
+
+    req.params = params;
+
     req.query = query ? extractQuery(query) : {};
 
     return route.controller({ req, res, database });

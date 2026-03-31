@@ -1,0 +1,12 @@
+{
+  "name": "support-ticket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch serc/server.js"
+  },
+  "author": "drkmatheus",
+  "license": "ISC"
+}
